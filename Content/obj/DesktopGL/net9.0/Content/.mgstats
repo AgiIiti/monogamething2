@@ -1,1 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/background1.jfif","c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/bin/DesktopGL/Content/background1.xnb","TextureProcessor","Texture2DContent",64195,1211365,0,2012195
+"c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/mushroom sprite (2).png","c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/bin/DesktopGL/Content/mushroom sprite (2).xnb","TextureProcessor","Texture2DContent",969,5665,0,0076181
+"c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/MyFont.spritefont","c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",488,37913,0,0829152
+"c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/patroller.png","c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/bin/DesktopGL/Content/patroller.xnb","TextureProcessor","Texture2DContent",14910,32853,0,0035231
+"c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/trees.png","c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/bin/DesktopGL/Content/trees.xnb","TextureProcessor","Texture2DContent",395849,1880085,0,0540879

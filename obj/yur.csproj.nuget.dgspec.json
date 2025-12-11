@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\joel\\yur\\yur.csproj": {}
+    "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj": {}
   },
   "projects": {
-    "c:\\Users\\joel\\yur\\yur.csproj": {
+    "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\joel\\yur\\yur.csproj",
+        "projectUniqueName": "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj",
         "projectName": "yur",
-        "projectPath": "c:\\Users\\joel\\yur\\yur.csproj",
-        "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\joel\\yur\\obj\\",
+        "projectPath": "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj",
+        "packagesPath": "C:\\Users\\Oliver N\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Oliver N\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

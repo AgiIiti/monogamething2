@@ -81,3 +81,46 @@ c:\Users\joel\yur\obj\Debug\net9.0\ref\yur.dll
 c:\Users\joel\yur\bin\Debug\net9.0\Content\patroller.xnb
 c:\Users\joel\yur\bin\Debug\net9.0\Content\MyFont.spritefont
 c:\Users\joel\yur\bin\Debug\net9.0\Content\MyFont.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\ChatGPT Image Nov 6, 2025, 10_48_41 AM.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\ghost.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\MyFont.spritefont
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\Zoja.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\background1.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\mushroom sprite (2).xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\MyFont.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\patroller.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\Content\trees.xnb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\yur.exe
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\yur.deps.json
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\yur.runtimeconfig.json
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\yur.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\yur.pdb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\MonoGame.Framework.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\NVorbis.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\android-arm\native\libopenal.so
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\android-arm64\native\libopenal.so
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\android-x64\native\libopenal.so
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\android-x86\native\libopenal.so
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\ios-arm64\native\libopenal.a
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\iossimulator-arm64\native\libopenal.a
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\iossimulator-x64\native\libopenal.a
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\linux-arm64\native\libopenal.so
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\linux-x64\native\libopenal.so
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\osx\native\libopenal.dylib
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\win-x64\native\openal.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\osx\native\libSDL2-2.0.0.dylib
+c:\Users\Oliver N\Documents\GitHub\monogamething2\bin\Debug\net9.0\runtimes\win-x64\native\SDL2.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\mgcb.tool.restore
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.csproj.AssemblyReference.cache
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.AssemblyInfoInputs.cache
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.AssemblyInfo.cs
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.csproj.CoreCompileInputs.cache
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.sourcelink.json
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.csproj.Up2Date
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\refint\yur.dll
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.pdb
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\yur.genruntimeconfig.cache
+c:\Users\Oliver N\Documents\GitHub\monogamething2\obj\Debug\net9.0\ref\yur.dll

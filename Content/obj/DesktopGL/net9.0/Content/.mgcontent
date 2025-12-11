@@ -4,11 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/mxw692/monog/Content/background1.jfif</File>
-    <File>/Users/mxw692/monog/Content/mushroom sprite (2).png</File>
-    <File>/Users/mxw692/monog/Content/MyFont.spritefont</File>
-    <File>/Users/mxw692/monog/Content/patroller.png</File>
-    <File>/Users/mxw692/monog/Content/trees.png</File>
+    <File>c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/background1.jfif</File>
+    <File>c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/mushroom sprite (2).png</File>
+    <File>c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/MyFont.spritefont</File>
+    <File>c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/patroller.png</File>
+    <File>c:/Users/Oliver N/Documents/GitHub/monogamething2/Content/trees.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

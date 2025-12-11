@@ -18,7 +18,6 @@ public class Enemy
     public Rectangle Hitbox { get; set; }
     public Texture2D Texture { get; set; }
     public int Health { get; set; }
-    
     // lista med components som en fiende kan ha
     public List<IEnemyComponent> Components { get; set; } = new();
     

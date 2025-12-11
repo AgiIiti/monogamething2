@@ -84,7 +84,7 @@
           "runtimes/win-x64/native/openal.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "1.24.3.0"
           }
         }
       },
@@ -103,7 +103,7 @@
           "runtimes/win-x64/native/SDL2.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "2.32.2.0"
           }
         }
       },

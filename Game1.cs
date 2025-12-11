@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Text.Json;
+using System.Diagnostics;
 
 namespace yur;
 
@@ -50,6 +51,9 @@ public class Game1 : Game
     public int playerdeathcount = 0;
     private SpriteFont font;
 
+    private bool allowDoubleJump = false;
+    private bool SpaceLastFrame = false;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -84,7 +88,7 @@ public class Game1 : Game
             viewport.Height / 2f - picture.Height / 2f
         );
 
-        groundy = viewport.Height - picture.Height;
+        groundy = viewport.Height - picture.Height + 5;
 
         string json = System.IO.File.ReadAllText("data.json");
         RectanglesFile data = JsonSerializer.Deserialize<RectanglesFile>(json);
@@ -99,10 +103,10 @@ public class Game1 : Game
         }
 
         platforms.Add(new Rectangle(
-                -5000,           
-                groundy,        
-                (int)worldwidth * 3,  
-                100              
+                -5000,
+                groundy,
+                (int)worldwidth * 3,
+                100
             ));
 
         cameraPosition = Vector2.Zero;
@@ -112,122 +116,144 @@ public class Game1 : Game
         enemies.Add(EnemyFactory.CreatePatroller(new Vector2(1000, 400), patrollerTexture, 900, 1100));
         font = Content.Load<SpriteFont>("MyFont");
 
-        
+
         gameObjects.Add(new PowerUp(new Vector2(800, 400), PowerUpType.JumpBoost, 30, 10f));
         gameObjects.Add(new Teleporter(new Vector2(600, 400), new Vector2(1500, 300), 50, 50));
+        gameObjects.Add(new PowerUp(new Vector2(400, 300), PowerUpType.DoubleJump));
 
 
 
-        }
+    }
 
     protected override void Update(GameTime gameTime)
-{
-    var viewport = GraphicsDevice.Viewport;
-    var keyboard = Keyboard.GetState();
-    if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-        Keyboard.GetState().IsKeyDown(Keys.Escape))
-        Exit();
-
-    float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-    var playerposition = player.Position;
-    var playervelocity = player.Velocity;
-
-    var previousPosition = playerposition;
-
-    if (keyboard.IsKeyDown(Keys.A))
     {
-        playerposition.X -= player.Speed * dt;
-    }
-    if (keyboard.IsKeyDown(Keys.D))
-    {
-        playerposition.X += player.Speed * dt;
-    }
+        
+        var viewport = GraphicsDevice.Viewport;
+        var keyboard = Keyboard.GetState();
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+            Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
 
-    if (keyboard.IsKeyDown(Keys.Space) && player.IsOnGround)
-    {
-        playervelocity.Y = player.JumpSpeed;
-        player.IsOnGround = false;
-    }
+        float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-    float targetCamX = playerposition.X - viewport.Width / 2f;
+        var playerposition = player.Position;
+        var playervelocity = player.Velocity;
 
-    playervelocity.Y += gravity * dt;
-    playerposition += playervelocity * dt;
+        var previousPosition = playerposition;
 
-    Rectangle playerHitbox = new Rectangle(
-        (int)playerposition.X,
-        (int)playerposition.Y,
-        picture.Width,
-        picture.Height
-    );
-    player.IsOnGround = false;
-
-    foreach (var platform in platforms)
-    {
-        if (playerHitbox.Intersects(platform))
+        if (keyboard.IsKeyDown(Keys.A))
         {
-            float feet = playerposition.Y + picture.Height;
-            
-            if (playervelocity.Y >= 0 && Math.Abs(feet - platform.Top) < 20)
+            playerposition.X -= player.Speed * dt;
+        }
+        if (keyboard.IsKeyDown(Keys.D))
+        {
+            playerposition.X += player.Speed * dt;
+        }
+
+        if (player.IsOnGround)
+            allowDoubleJump = true;
+
+        if (keyboard.IsKeyDown(Keys.Space) && SpaceLastFrame == false)
+        {
+            if (player.IsOnGround)
             {
-                playerposition.Y = platform.Top - picture.Height;
-                playervelocity.Y = 0;
-                player.IsOnGround = true;
+                playervelocity.Y = player.JumpSpeed;
+                player.IsOnGround = false;
+            }
+            else if (player.HasDoubleJump && allowDoubleJump)
+            {
+                playervelocity.Y = player.JumpSpeed;
+                allowDoubleJump = false;
             }
         }
-    }
 
-    player.Position = playerposition;
-    player.Velocity = playervelocity;
+        SpaceLastFrame = keyboard.IsKeyDown(Keys.Space);
 
-    // spelarens hitbox
-    playerHitbox = new Rectangle(
-        (int)player.Position.X,
-        (int)player.Position.Y,
-        picture.Width,
-        picture.Height
-    );
+        float targetCamX = playerposition.X - viewport.Width / 2f;
 
+        player.IsOnGround = false;
+        
+        playervelocity.Y += gravity * dt;
+        playerposition += playervelocity * dt;
 
-    foreach (var obj in gameObjects)
-    {
-        obj.Update(dt, playerHitbox, ref player);
-    }
+        Rectangle playerHitbox = new Rectangle(
+            (int)playerposition.X,
+            (int)playerposition.Y,
+            picture.Width,
+            picture.Height
+        );
 
 
-    if (player.Position.Y >= groundy)
-    {
-        player.Position = new Vector2(player.Position.X, groundy);
-        player.Velocity = new Vector2(player.Velocity.X, 0);
-        player.IsOnGround = true;
-    }
-
-
-    player.Position = new Vector2(
-        MathHelper.Clamp(player.Position.X, -worldwidth - picture.Width, worldwidth - picture.Width),
-        player.Position.Y
-    );
-
-    cameraPosition.X = targetCamX;
-
-    // Kör genom alla fiender i listan
-    foreach (var enemy in enemies)
-    {
-        enemy.Update(dt, platforms, gravity, player);
-    }
-
-    // Tittar efter en collision och isf lägger till
-    foreach (var enemy in enemies)
-    {
-        if (playerHitbox.Intersects(enemy.Hitbox))
+        foreach (var platform in platforms)
         {
-            playerdeathcount += 1;
-        }
-    }
+            float feetNow = playerposition.Y + picture.Height;
+            float feetPrev = previousPosition.Y + picture.Height;
 
-    base.Update(gameTime);
-}
+            if (playervelocity.Y >= 0)
+            {
+                // Did we cross the platform top this frame?
+                if (feetPrev <= platform.Top && feetNow >= platform.Top &&
+                    playerposition.X + picture.Width > platform.Left &&
+                    playerposition.X < platform.Right)
+                {
+                    playerposition.Y = platform.Top - picture.Height;
+                    playervelocity.Y = 0;
+                    player.IsOnGround = true;
+                }
+            }
+        }
+
+        player.Position = playerposition;
+        player.Velocity = playervelocity;
+
+        // spelarens hitbox
+        playerHitbox = new Rectangle(
+            (int)player.Position.X,
+            (int)player.Position.Y,
+            picture.Width,
+            picture.Height
+        );
+
+
+        foreach (var obj in gameObjects)
+        {
+            obj.Update(dt, playerHitbox, ref player);
+        }
+
+
+        if (player.Position.Y >= groundy)
+        {
+            player.Position = new Vector2(player.Position.X, groundy);
+            player.Velocity = new Vector2(player.Velocity.X, 0);
+            player.IsOnGround = true;
+        }
+
+
+
+        player.Position = new Vector2(
+            MathHelper.Clamp(player.Position.X, -worldwidth - picture.Width, worldwidth - picture.Width),
+            player.Position.Y
+        );
+
+        cameraPosition.X = targetCamX;
+
+        // Kör genom alla fiender i listan
+        foreach (var enemy in enemies)
+        {
+            enemy.Update(dt, platforms, gravity, player);
+        }
+
+        // Tittar efter en collision och isf lägger till
+        foreach (var enemy in enemies)
+        {
+            if (playerHitbox.Intersects(enemy.Hitbox))
+            {
+                playerdeathcount += 1;
+            }
+        }
+
+        base.Update(gameTime);
+    }
 
     protected override void Draw(GameTime gameTime)
     {

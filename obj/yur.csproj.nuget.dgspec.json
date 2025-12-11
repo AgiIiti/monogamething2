@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mxw692/monog/yur.csproj": {}
+    "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj": {}
   },
   "projects": {
-    "/Users/mxw692/monog/yur.csproj": {
+    "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mxw692/monog/yur.csproj",
+        "projectUniqueName": "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj",
         "projectName": "yur",
-        "projectPath": "/Users/mxw692/monog/yur.csproj",
-        "packagesPath": "/Users/mxw692/.nuget/packages/",
-        "outputPath": "/Users/mxw692/monog/obj/",
+        "projectPath": "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\yur.csproj",
+        "packagesPath": "C:\\Users\\Oliver N\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Oliver N\\Documents\\GitHub\\monogamething2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mxw692/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Oliver N\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
